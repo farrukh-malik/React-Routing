@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import user from './user.svg';
 
 
 class Users extends Component {
@@ -12,7 +12,7 @@ class Users extends Component {
             <div className="App">
                 <h1>User Component</h1>
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
+                    <img src={user} className="App-logo" alt="logo" />
                 </header>
             </div>
         );

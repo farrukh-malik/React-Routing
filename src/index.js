@@ -6,23 +6,22 @@ import * as serviceWorker from './serviceWorker';
 import Users from './users';
 import Contact from './contact';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
+// // Put any other imports below so that CSS from your
+// // components takes precedence over default styles.
 
 
 const routing = (
     <Router>
         <div>
-            {/* <button><Link to="/home">Home</Link></button> this can also work*/}
-            <ul>
-                <li>
-                    <Link to="/home">Home</Link>
-                </li>
-                <li>
-                    <Link to="/users">Users</Link>
-                </li>
-                <li>
-                    <Link to="/contact">Contact</Link>
-                </li>
-            </ul>
+            <Container>
+                <Row >
+                    <Col className="tab"><Link to="/home">Home</Link></Col>
+                    <Col className="tab"><Link to="/users">Users</Link></Col>
+                    <Col className="tab"><Link to="/contact">Contact</Link></Col>
+                </Row>
+            </Container>
 
             <Route path="/home" component={App} />
             <Route path="/users" component={Users} />
